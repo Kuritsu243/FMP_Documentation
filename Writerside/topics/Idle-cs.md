@@ -142,3 +142,39 @@ Idle()
 
 Enter()
 : Sets variable values to match the values on the Player Controller Script, while zeroing the players velocity and vertical velocity.
+
+HandleInput()
+: Checks if the player is jumping, if the player is in the tutorial level then confirm the player has pressed jump for the input prompt. If the player is pressing any
+of the movement keys, and is in tutorial, while the introduction is not complete, then set the relevant input checks to true. Calculates the player's velocity.
+
+LogicUpdate()
+: If Jumping then change to jumping state, if moving then change to the walking state, if sliding then change to the sliding state.
+
+PhysicsUpdate()
+: Apply gravity, update if the player is grounded, zeroes the gravity if grounded, moves the player.
+
+## Variables
+{type="wide" sorted="asc"}
+isJumping
+: Is the player jumping.
+
+isSliding
+: Is the player sliding.
+
+isGrounded
+: Is the player grounded.
+
+isMoving
+: Is the player moving.
+
+movementInput
+: X and Y Values of the players movement input.
+
+playerVelocity
+: X, Y and Z Values of the players velocity.
+
+verticalVelocity
+: X, Y and Z values of the players vertical velocity.
+
+PlayerTransform
+: A reference to the transform of the player's Character Controller component.
