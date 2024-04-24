@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="hi"
+                 name="FGTE6003: Final Major Project - Timeleap"
+                  start-page="Introduction.md">
+
+    <toc-element topic="Introduction.md"/>
+    <toc-element topic="Game-Overview.md"/>
+    <toc-element topic="Project-Management.md"/>
+    <toc-element topic="Technicalities.md"/>
+    <toc-element topic="Development-Timelines.md"/>
+    <toc-element topic="Gameplay-Mechanics.md"/>
+    <toc-element topic="Input-Keybinds.md"/>
+    <toc-element topic="Tutorial.md"/>
+    <toc-element topic="Game-Source.md">
+        <toc-element topic="Player.md">
+            <toc-element topic="Player-FSM.md">
+                <toc-element topic="Player-States.md">
+                    <toc-element topic="Idle-cs.md"/>
+                    <toc-element topic="Airborne.md"/>
+                </toc-element>
+                <toc-element topic="FsmState-cs.md"/>
+                <toc-element topic="FiniteStateMachine-cs.md"/>
+            </toc-element>
+            <toc-element topic="PlayerController-cs.md"/>
+            <toc-element topic="PlayerHealth-cs.md"/>
+            <toc-element topic="PlayerAnimation-cs.md"/>
+            <toc-element topic="PlayerProjectilePool-cs.md"/>
+        </toc-element>
+    </toc-element>
+</instance-profile>
