@@ -18,6 +18,10 @@
         <toc-element topic="Player.md">
             <toc-element topic="Player-FSM.md">
                 <toc-element topic="Player-States.md">
+                    <toc-element topic="WallRunning-cs.md"/>
+                    <toc-element topic="WallJumping-cs.md"/>
+                    <toc-element topic="Walking-cs.md"/>
+                    <toc-element topic="Sliding-cs.md"/>
                     <toc-element topic="Jumping-cs.md"/>
                     <toc-element topic="Idle-cs.md"/>
                     <toc-element topic="Airborne.md"/>

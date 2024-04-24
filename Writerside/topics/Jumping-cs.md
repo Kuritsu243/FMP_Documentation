@@ -187,3 +187,68 @@ RaycastHit variable and indicate that the player is able to wall run.
 
 Exit()
 : Sets the player to grounded, no longer jumping, and checks if walls are marked as true and update the values on the Player Controller script.
+
+## Private Methods
+{type="wide" sorted="asc"}
+Jump()
+: Sets the Y axis of the vertical velocity vector to the calculated value dependant on the players jump height and gravity.
+
+## Variables
+
+{type="wide" sorted="asc"}
+gravityValue
+: Reference to the player gravity.
+
+playerSpeed
+: Reference to the player's speed.
+
+playerJumpHeight
+: Reference to the player's jump height.
+
+isJumping
+: Is the player jumping.
+
+isSliding
+: Is the player sliding.
+
+isGrounded
+: Is the player grounded.
+
+isMoving
+: Is the player moving.
+
+mouseInput
+: The X and Y values of the player's mouse delta.
+
+movementInput
+: The X and Y values of the players movement input.
+
+playerVelocity
+: The X, Y and Z values of the players velocity.
+
+verticalVelocity
+: The X, Y and Z values of the players vertical velocity
+
+_maxWallDistance
+: The max length that can be reached between a player and a wall.
+
+_whatIsWall
+: The layer mask determining what objects can be wall ran on.
+
+_leftWallHit
+: Reference to the wall detected to the left of the player.
+
+_rightWallHit
+: Reference to the wall detected to the right of the player.
+
+_leftWall
+: Is left wall detected.
+
+_rightWall
+: Is right wall detected.
+
+_canWallRun
+: Can the player wall run.
+
+PlayerTransform
+: A reference to the transform of the player's Character Controller component.
