@@ -15,7 +15,6 @@ using Tutorial;
 using UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Serialization;
 using Weapons;
 
 namespace Player
@@ -32,22 +31,19 @@ namespace Player
                     foundChild = child.gameObject;
             }
 
-            if (foundChild != null)
+            if (foundChild)
             {
                 return foundChild;
             }
-            else
-            {
-                throw new Exception("No child object with tag!");
-            }
 
+            throw new Exception("No child object with tag!");
         }
     }
-    
+
     public class PlayerController : MonoBehaviour
     {
-        
-#region Required Components
+        #region Required Components
+
         [HideInInspector] public GameObject eventSystem;
         [HideInInspector] public inputSystem inputSystem;
         [HideInInspector] public PlayerInput playerInput;
@@ -58,35 +54,35 @@ namespace Player
         [HideInInspector] public PlayerHealth playerHealth;
         [HideInInspector] public CanvasScript canvasScript;
         [HideInInspector] public AudioSource audioSource;
-#endregion
- 
-#region Player States
+
+        #endregion
+
+        #region Player States
 
         private PlayerStateMachine _playerStateMachine;
         [HideInInspector] public Idle IdleState;
         [HideInInspector] public Walking WalkingState;
-        [HideInInspector] public Sprinting sprintingState;
         [HideInInspector] public Jumping JumpingState;
         [HideInInspector] public Airborne AirborneState;
         [HideInInspector] public WallJumping WallJumpingState;
         [HideInInspector] public WallRunning WallRunState;
         [HideInInspector] public Sliding SlidingState;
-        
-#endregion
 
-#region Configurable Settings
+        #endregion
+
+        #region Configurable Settings
 
         [Header("Player Movement")] 
         [SerializeField] private float playerSpeed;
         [SerializeField] private float sprintingSpeed;
         [SerializeField] private Quaternion maxWallRotation;
 
-        [Header("Player Look")] 
-        [Range(0, 200)][SerializeField] private float mouseSensitivity;
+        [Header("Player Look")] [Range(0, 200)] 
+        [SerializeField] private float mouseSensitivity;
         [SerializeField] private float xClamp;
         [SerializeField] private float rotationSpeed;
-        
-        
+
+
         [Header("Player Jump")] 
         [SerializeField] private float playerJumpHeight;
         [SerializeField] private float playerGravity;
@@ -96,14 +92,14 @@ namespace Player
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private LayerMask whatIsWall;
         [SerializeField] private LayerMask raycastLayers;
-        
+
         [Header("Wall Run Settings")] 
         [SerializeField] private float wallRunSpeed;
         [SerializeField] private float wallRunForce;
         [SerializeField] private float wallRunMaxDuration;
         [SerializeField] private float wallRunExitTime;
         [SerializeField] private float wallRunCooldown;
-        
+
         [Header("Wall Run Detection Settings")] 
         [SerializeField] private float maxWallDistance;
 
@@ -113,42 +109,33 @@ namespace Player
         [SerializeField] private float wallMemoryTime;
         [SerializeField] private float wallJumpCooldown;
         
-
         [Header("Sliding Settings")] 
         [SerializeField] private float maxSlideTime;
         [SerializeField] private float slideForce;
         [SerializeField] private float slideYScale;
         [SerializeField] private float slideCooldown;
-        
+
         [Header("Interact Settings")] 
         [SerializeField] private float maxInteractDistance;
-        
+
         [Header("Weapons")] 
-        [SerializeField] private Pistol pistol;
+        [SerializeField] private Pistol pistol; 
         [SerializeField] private Shotgun shotgun;
-        
+
         [Header("Tutorial Settings")] 
         [SerializeField] private bool isTutorial;
-
         [SerializeField] private GameObject lineRender;
-        
-        
-        
-        
-#endregion
 
-#region Public References to private vars
+        #endregion
+
+        #region Public References to private vars
 
         public Transform PlayerTransform => characterController.transform;
         public float JumpHeight => playerJumpHeight;
         public float PlayerSpeed => playerSpeed;
-        public float SprintingSpeed => sprintingSpeed;
-        public float XClamp => xClamp;
-        public float RotationSpeed => rotationSpeed;
         public float SlideCooldown => slideCooldown;
         public float PlayerGravity => playerGravity;
         public float WallRunForce => wallRunForce;
-        public float WallRunSpeed => wallRunSpeed;
         public LayerMask WhatIsWall => whatIsWall;
         public float MaxSlideTime => maxSlideTime;
         public float SlideForce => slideForce;
@@ -159,26 +146,23 @@ namespace Player
         public float WallJumpUpForce => wallJumpUpForce;
         public float WallJumpSideForce => wallJumpSideForce;
         public float MaxWallDistance => maxWallDistance;
-
         public bool IsTutorial => isTutorial;
-
         public PlayerStateMachine PlayerFsm => _playerStateMachine;
-        
-#endregion
 
-#region Public Vars
+        #endregion
+
+        #region Public Vars
 
         public bool isGrounded;
         public bool canSlide;
         public bool canJump;
         public bool checkForWallsWhenAirborne;
-        public bool canWallRun;
         public bool canWallJump;
         public bool jumpingFromLeftWall;
         public bool jumpingFromRightWall;
         public bool leftWall;
         public bool rightWall;
-        
+
         public RaycastHit JumpingLeftWallHit;
         public RaycastHit JumpingRightWallHit;
         public RaycastHit LeftWallHit;
@@ -187,9 +171,9 @@ namespace Player
         public CinemachineBrain activeCinemachineBrain;
         public TutorialController tutorialController;
 
-#endregion
+        #endregion
 
-        
+
         public void Awake()
         {
             audioSource = GetComponent<AudioSource>();
@@ -208,10 +192,10 @@ namespace Player
             IdleState = new Idle("Idle", this, _playerStateMachine);
             WalkingState = new Walking("Walking", this, _playerStateMachine);
             JumpingState = new Jumping("Jumping", this, _playerStateMachine);
-            WallRunState = new WallRunning("WallRunning", this, _playerStateMachine);
+            WallRunState = new WallRunning(this, _playerStateMachine);
             AirborneState = new Airborne("Airborne", this, _playerStateMachine);
             SlidingState = new Sliding("Sliding", this, _playerStateMachine);
-            WallJumpingState = new WallJumping("WallJumping", this, _playerStateMachine);
+            WallJumpingState = new WallJumping(this, _playerStateMachine);
             playerInput.actions["Shoot"].performed += _ => playerShooting.Fire();
             playerInput.actions["Interact"].performed += _ => Interact();
             playerInput.actions["Reload"].performed += _ => playerShooting.Reload();
@@ -221,10 +205,6 @@ namespace Player
             _playerStateMachine.Initialize(IdleState);
             Cursor.lockState = CursorLockMode.Locked;
             SetMouseSensitivity();
-
-            
-            
-
         }
 
         private void Update()
@@ -232,9 +212,7 @@ namespace Player
             _playerStateMachine.CurrentState.HandleInput();
             _playerStateMachine.CurrentState.LogicUpdate();
         }
-        
-        
-        
+
 
         private void SetMouseSensitivity()
         {
@@ -244,19 +222,10 @@ namespace Player
         private void FixedUpdate()
         {
             isGrounded = characterController.isGrounded;
-            Debug.LogWarning($"Is Player Grounded? {isGrounded}");
             _playerStateMachine.CurrentState.PhysicsUpdate();
         }
 
-        private void OnGUI()
-        {
-            string content = _playerStateMachine.CurrentState != null
-                ? _playerStateMachine.CurrentState.ToString()
-                : "No state";
-            GUILayout.Label($"<color='black'><size='40'>{content}</size></color>");
-        }
-
-        public IEnumerator ActionCooldown(Action cooldownComplete, float timeToTake)
+        public static IEnumerator ActionCooldown(Action cooldownComplete, float timeToTake)
         {
             yield return new WaitForSeconds(timeToTake);
             cooldownComplete?.Invoke();
@@ -264,32 +233,20 @@ namespace Player
 
         private void Interact()
         {
-            // var rayOrigin = activeCinemachineBrain.gameObject.GetComponent<Camera>()
-            //     .ScreenPointToRay(new Vector3(0.5f, 0.5f, 0f));
             activeCinemachineBrain.gameObject.TryGetComponent<Camera>(out var activeCam);
             var rayOrigin = new Ray(activeCam.transform.position, activeCam.transform.forward);
-            // Debug.DrawRay(rayOrigin.origin, rayOrigin.direction, Color.red, 20f);
-            // var newLine = Instantiate(lineRender);
-            // var lr = newLine.GetComponent<LineRenderer>();
-            // lr.SetPosition(0, rayOrigin.origin);
-            // lr.SetPosition(1, rayOrigin.direction * 20f);
-            
             if (!Physics.Raycast(rayOrigin, out var hit, maxInteractDistance)) return;
-            Debug.LogWarning("tag: " +hit.transform.tag);
-            Debug.LogWarning("object name:" +hit.transform.gameObject);
-            Debug.LogWarning("parent name:" +hit.transform.root.gameObject);
-            
             switch (hit.transform.tag)
             {
                 case "Pistol":
                     var collidedPistol = hit.transform.gameObject;
                     playerShooting.EquipWeapon(pistol);
                     pistol.gameObject.SetActive(true);
-                    if (collidedPistol.TryGetComponent<Outline>(out var pistolOutline))
+                    if (collidedPistol.TryGetComponent<Outline>(out _))
                         Destroy(collidedPistol.GetComponent<Outline>());
                     Destroy(collidedPistol);
                     if (isTutorial) tutorialController.PistolCollected();
-                    break;  
+                    break;
                 case "Shotgun":
                     var collidedShotgun = hit.transform.gameObject;
                     playerShooting.EquipWeapon(shotgun);
@@ -300,12 +257,6 @@ namespace Player
                     tutorialController.ComputerInteracted();
                     break;
             }
-            
-        }
-
-        private void OnDrawGizmosSelected()
-        {
-            
         }
     }
 }

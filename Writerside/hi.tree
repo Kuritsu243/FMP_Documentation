@@ -14,17 +14,76 @@
     <toc-element topic="Gameplay-Mechanics.md"/>
     <toc-element topic="Input-Keybinds.md"/>
     <toc-element topic="Tutorial.md"/>
+    <toc-element topic="Shader-Development.md"/>
+    <toc-element topic="User-Interface.md"/>
+    <toc-element topic="Sound-Effects.md"/>
+    <toc-element topic="Tools-Used.md"/>
+    <toc-element topic="External-Assets.md"/>
+    <toc-element topic="Self-Evaluation.md"/>
+    <toc-element topic="Attendance-and-Engagement.md">
+    </toc-element>
+    <toc-element topic="Builds.md"/>
     <toc-element topic="Game-Source.md">
+        <toc-element topic="Unused-Scripts.md"/>
+        <toc-element topic="Weapon-Scripts.md">
+            <toc-element topic="Enemy-Weapon-Scripts.md">
+                <toc-element topic="EnemyBaseWeapon-cs.md"/>
+                <toc-element topic="EnemyPistol-cs.md"/>
+                <toc-element topic="EnemyProjectile-cs.md"/>
+                <toc-element topic="EnemyProjectilePool-cs.md"/>
+                <toc-element topic="EnemyShotgun-cs.md"/>
+            </toc-element>
+            <toc-element topic="BaseWeapon-cs.md"/>
+            <toc-element topic="BulletCasing-cs.md"/>
+            <toc-element topic="Pistol-cs.md"/>
+            <toc-element topic="Projectile-cs.md"/>
+            <toc-element topic="Shotgun-cs.md"/>
+            <toc-element topic="WeaponScript-cs.md"/>
+        </toc-element>
+        <toc-element topic="UI-Scripts.md">
+            <toc-element topic="StartScreen-cs.md"/>
+            <toc-element topic="DeathScreen-cs.md"/>
+            <toc-element topic="CanvasScript-cs.md"/>
+        </toc-element>
+        <toc-element topic="Environment-Scripts.md">
+            <toc-element topic="Lighting.md">
+                <toc-element topic="LightFlicker-cs.md"/>
+            </toc-element>
+            <toc-element topic="FloatingWallController-cs.md"/>
+            <toc-element topic="OutOfWorldSensor-cs.md"/>
+            <toc-element topic="Portal-cs.md"/>
+        </toc-element>
+        <toc-element topic="Debugging-Scripts.md">
+            <toc-element topic="ShowMoveState-cs.md"/>
+            <toc-element topic="StateReporter-cs.md"/>
+        </toc-element>
+        <toc-element topic="Camera-Scripts.md">
+            <toc-element topic="Camera-State-Machine.md">
+                <toc-element topic="Camera-States.md">
+                    <toc-element topic="FirstPersonState-cs.md"/>
+                    <toc-element topic="ThirdPersonState-cs.md"/>
+                </toc-element>
+            </toc-element>
+            <toc-element topic="CameraStateMachine-cs.md"/>
+            <toc-element topic="CameraState-cs.md"/>
+            <toc-element topic="CinemachineMouseLook-cs.md"/>
+            <toc-element topic="MainCamera-cs.md"/>
+        </toc-element>
+        <toc-element topic="Enemy-Scripts.md">
+            <toc-element topic="EnemyController-cs.md"/>
+            <toc-element topic="EnemyHealth-cs.md"/>
+            <toc-element topic="EnemyShooting-cs.md"/>
+        </toc-element>
         <toc-element topic="Player.md">
             <toc-element topic="Player-FSM.md">
                 <toc-element topic="Player-States.md">
-                    <toc-element topic="WallRunning-cs.md"/>
-                    <toc-element topic="WallJumping-cs.md"/>
-                    <toc-element topic="Walking-cs.md"/>
-                    <toc-element topic="Sliding-cs.md"/>
-                    <toc-element topic="Jumping-cs.md"/>
-                    <toc-element topic="Idle-cs.md"/>
                     <toc-element topic="Airborne.md"/>
+                    <toc-element topic="Idle-cs.md"/>
+                    <toc-element topic="Jumping-cs.md"/>
+                    <toc-element topic="Sliding-cs.md"/>
+                    <toc-element topic="Walking-cs.md"/>
+                    <toc-element topic="WallJumping-cs.md"/>
+                    <toc-element topic="WallRunning-cs.md"/>
                 </toc-element>
                 <toc-element topic="FsmState-cs.md"/>
                 <toc-element topic="FiniteStateMachine-cs.md"/>
@@ -33,6 +92,18 @@
             <toc-element topic="PlayerHealth-cs.md"/>
             <toc-element topic="PlayerAnimation-cs.md"/>
             <toc-element topic="PlayerProjectilePool-cs.md"/>
+            <toc-element topic="PlayerShooting-cs.md"/>
+        </toc-element>
+        <toc-element topic="Input-Scripts.md">
+            <toc-element topic="InputSystem-cs.md"/>
+        </toc-element>
+        <toc-element topic="Tutorial-Scripts.md">
+            <toc-element topic="HighlightWeapon-cs.md"/>
+            <toc-element topic="HighlightComputer-cs.md"/>
+            <toc-element topic="LargeIslandSensor-cs.md"/>
+            <toc-element topic="TutorialController-cs.md"/>
+            <toc-element topic="TutorialEnemy-cs.md"/>
+            <toc-element topic="TutorialEnemyController-cs.md"/>
         </toc-element>
     </toc-element>
 </instance-profile>

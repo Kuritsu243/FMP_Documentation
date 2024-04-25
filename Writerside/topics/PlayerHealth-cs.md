@@ -5,8 +5,6 @@ This script is used to manage the Player's health in-game. It calls the required
 
 ## Script
 ```C#
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,16 +12,10 @@ namespace Player
 {
     public class PlayerHealth : MonoBehaviour
     {
-
         [SerializeField] private float maxHealth = 10;
-        
-        public float CurrentHealth { get; set; }
+        public float CurrentHealth { get; private set; }
 
-        public float MaxHealth
-        {
-            get => maxHealth;
-            set => maxHealth = value;
-        }
+        public float MaxHealth => maxHealth;
 
 
         public void Damage(float amount)
@@ -37,25 +29,16 @@ namespace Player
             CurrentHealth = maxHealth;
         }
 
-        private void Die()
+        private static void Die()
         {
             LoadNextScene();
         }
 
-        private void LoadNextScene()
+        private static void LoadNextScene()
         {
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(2);
         }
-
-        private IEnumerator LoadLevel(int levelIndex)
-        {
-            // todo: add crossfade
-            
-            SceneManager.LoadSceneAsync(levelIndex);
-            yield break;
-        }
-
     }
 }
 ```

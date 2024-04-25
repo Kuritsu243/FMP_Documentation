@@ -5,14 +5,11 @@ This script defines the Player's Finite State Machine system, and handles the in
 
 ## Script
 ```C#
-using System;
-using UnityEngine;
-
 namespace Player.FSM
 {
     public abstract class FiniteStateMachine
     {
-        private FsmState initialState;
+        private FsmState _initialState;
         
         public FsmState CurrentState { get; set; }
         public FsmState PreviousState { get; set; }
@@ -38,6 +35,7 @@ namespace Player.FSM
 
     }
 }
+
 ```
 {collapsible="true" collapsed-title="FiniteStateMachine.cs"}
 

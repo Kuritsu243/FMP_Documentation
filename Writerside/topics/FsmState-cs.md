@@ -5,7 +5,6 @@ The base class for all the states used within the Player's Finite State Machine.
 
 ## Script
 ```C#
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cameras;
@@ -17,7 +16,7 @@ namespace Player.FSM
     public abstract class FsmState
     {
         protected PlayerController Character;
-        protected TutorialController TutorialController;
+        protected readonly TutorialController TutorialController;
         protected FiniteStateMachine StateMachine;
 
         protected readonly InputAction MoveAction;
@@ -28,15 +27,17 @@ namespace Player.FSM
         private Vector2 _mouseInput;
         private float _mouseX;
         private float _mouseY;
+        // ReSharper disable once NotAccessedField.Local
         private CinemachineCamera _thirdPersonCam;
+        // ReSharper disable once NotAccessedField.Local
         private CinemachineCamera _firstPersonCam;
         private float _xRotation;
         private Vector3 _targetRotation;
 
         protected FsmState(FiniteStateMachine stateMachine, PlayerController playerController)
         {
-            this.StateMachine = stateMachine;
-            this.Character = playerController;
+            StateMachine = stateMachine;
+            Character = playerController;
 
 
             MoveAction = playerController.playerInput.actions["Movement"];
@@ -49,7 +50,6 @@ namespace Player.FSM
         }
         
         
-        // mechanics
         public virtual void Enter()
         {
         }
@@ -74,7 +74,6 @@ namespace Player.FSM
                     Character.PlayerTransform.localRotation = playerLocalRotation;
                     break;
             }
-            
         }
 
 

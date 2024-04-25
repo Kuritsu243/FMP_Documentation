@@ -15,26 +15,21 @@ namespace Player
 {
     public class PlayerProjectilePool : MonoBehaviour
     {
-        public static PlayerProjectilePool SharedInstance;
         public List<GameObject> pooledProjectiles;
 
         [SerializeField] private GameObject objectToPool;
         [SerializeField] private int amountToPool;
 
-        private GameObject projParent;
-
-        private void Awake()
-        {
-            SharedInstance = this;
-        }
+        private GameObject _projParent;
+        
 
         private void Start()
         {
-            projParent = GameObject.FindGameObjectWithTag("ProjectilePool");
+            _projParent = GameObject.FindGameObjectWithTag("ProjectilePool");
             pooledProjectiles = new List<GameObject>();
             for (int i = 0; i < amountToPool; i++)
             {
-                var tmp = Instantiate(objectToPool, projParent.transform);
+                var tmp = Instantiate(objectToPool, _projParent.transform);
                 tmp.SetActive(false);
                 pooledProjectiles.Add(tmp);
             }
@@ -52,6 +47,7 @@ namespace Player
         }
     }
 }
+
 ```
 {collapsible="true" collapsed-title="PlayerProjectilePool.cs"}
 
