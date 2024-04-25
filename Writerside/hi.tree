@@ -14,10 +14,13 @@
     <toc-element topic="Gameplay-Mechanics.md"/>
     <toc-element topic="Input-Keybinds.md"/>
     <toc-element topic="Tutorial.md"/>
+    <toc-element topic="Game-Script.md"/>
     <toc-element topic="Shader-Development.md"/>
     <toc-element topic="User-Interface.md"/>
     <toc-element topic="Sound-Effects.md"/>
     <toc-element topic="Tools-Used.md"/>
+    <toc-element topic="Documentation-Development.md"/>
+    <toc-element topic="Documentation-Deployment.md"/>
     <toc-element topic="External-Assets.md"/>
     <toc-element topic="Self-Evaluation.md"/>
     <toc-element topic="Attendance-and-Engagement.md">
