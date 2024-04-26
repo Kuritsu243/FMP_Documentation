@@ -186,3 +186,28 @@ https://imran-momin.medium.com/dictionaries-unity-c-69b48448445f (Accessed: 26 A
 
 Unity Technologies (2022) Introduction to object pooling - unity learn, Unity Learn. Available at:
 https://learn.unity.com/tutorial/introduction-to-object-pooling (Accessed: 26 April 2024). 
+
+### UI Assets
+
+Kenney (2014a) Game Icons · Kenney, · Kenney. Available at:
+https://kenney.nl/assets/game-icons (Accessed: 19 April 2024).
+
+Kenney (2014b) UI Pack (RPG expansion) · Kenney, · Kenney. Available at:
+https://kenney.nl/assets/ui-pack-rpg-expansion (Accessed: 18 April 2024).
+
+Kenney (2018) Crosshair Pack · Kenney, · Kenney. Available at:
+https://kenney.nl/assets/crosshair-pack (Accessed: 19 April 2024). 
+
+Kenney (2023) Fantasy UI Borders · Kenney, · Kenney. Available at:
+https://kenney.nl/assets/fantasy-ui-borders (Accessed: 19 April 2024). 
+
+Kenney (2024) Input prompts · Kenney, · Kenney. Available at:
+https://kenney.nl/assets/input-prompts (Accessed: 18 April 2024). 
+
+Visyde Interactives (2018) Simple modern crosshairs: Pack 1: 2d icons, Unity Asset Store.
+Available at: https://assetstore.unity.com/packages/p/simple-modern-crosshairs-pack-1-79034 (Accessed: 19 April 2024)
+
+### VFX Particles
+
+Synty Studios (2023) Simple FX - cartoon particles: VFX particles, Unity Asset Store.
+Available at: https://assetstore.unity.com/packages/vfx/particles/simple-fx-cartoonparticles-67834 (Accessed: 19 April 2024). 
