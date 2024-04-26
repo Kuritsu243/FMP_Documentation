@@ -7,7 +7,7 @@ This includes software, 3D models, 2D art, sounds and tutorials I followed.
 
 ## Asset Table
 | Asset Type     | Name                                                    | Author                    | Link                                                                                                                            |
-| -------------- | ------------------------------------------------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+|----------------|---------------------------------------------------------|---------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | 3D Model(s)    | Low poly pack: 3D Environments                          | Andrey Graphics           | [Unity Asset Store](https://assetstore.unity.com/packages/3d/environments/low-poly-pack-94605)                                  |
 | 3D Model(s)    | Low Poly Storage Pack: 3D Urban                         | Broken Vector             | [Unity Asset Store](https://assetstore.unity.com/packages/p/low-poly-storage-pack-101732)                                       |
 | 3D Model(s)    | Modular Dungeons Pack                                   | Quaternius                | [Quaternius.com](https://quaternius.com/packs/modulardungeon.html)                                                              |
@@ -175,10 +175,10 @@ https://freesound.org/people/ShawnyBoy/sounds/166191/ (Accessed: 26 April 2024).
 
 ### Tutorials
 
-Brackeys (2020) How to make awesome scene transitions in unity! - youtube, YouTube. Available at:
+Brackeys (2020) How to make awesome scene transitions in unity! - YouTube, YouTube. Available at:
 https://www.youtube.com/watch?v=CE9VOZivb3I (Accessed: 26 April 2024).
 
-Microsoft (2019) Keyvaluepair class (system.collections.generic) | microsoft learn, Microsoft Learn. Available at:
+Microsoft (2019) KeyValuePair class (system.collections.generic) | microsoft learn, Microsoft Learn. Available at:
 https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.keyvaluepair?view=net-8.0 (Accessed: 26 April 2024).
 
 Momin, I. (2021) Dictionaries — unity C#, Medium. Available at:
