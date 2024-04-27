@@ -18,7 +18,7 @@ This includes software, 3D models, 2D art, sounds and tutorials I followed.
 | 3D Model(s)    | Sci-Fi Modular Gun Pack                                 | Quaternius                | [Quaternius.com](https://quaternius.com/packs/scifimodularguns.html)                                                            |
 | 3D Model(s)    | Ultimate Modular Ruins Pack                             | Quaternius                | [Quaternius.com](https://quaternius.com/packs/ultimatemodularruins.html)                                                        |
 | 3D Model(s)    | Ultimate Modular Sci-Fi Pack                            | Quaternius                | [Quaternius.com](https://quaternius.com/packs/ultimatemodularscifi.html)                                                        |
-| 3D Model(s)    | Platformer Game Kit                                     | Quaternius                | [Quaternius.com](https://quaternius.com/packs/ultimateplatformer.html)                                                          |
+| 3D Model(s)    | Platform Game Kit                                       | Quaternius                | [Quaternius.com](https://quaternius.com/packs/ultimateplatformer.html)                                                          |
 | 3D Model(s)    | Ultimate Fantasy RTS                                    | Quaternius                | [Quaternius.com](https://quaternius.com/packs/ultimatefantasyrts.html)                                                          |
 | 3D Model(s)    | Cyberpunk Game Kit                                      | Quaternius                | [Quaternius.com](https://quaternius.com/packs/cyberpunkgamekit.html)                                                            |
 | 3D Model(s)    | Toon Shooter Game Kit                                   | Quaternius                | [Quaternius.com](https://quaternius.com/packs/toonshootergamekit.html)                                                          |
@@ -35,6 +35,7 @@ This includes software, 3D models, 2D art, sounds and tutorials I followed.
 | Software       | OBS Studio                                              | Open Broadcaster Software | [OBSProject](https://obsproject.com/)                                                                                           |
 | Software       | Kdenlive                                                | KDE                       | [Kdenlive](https://kdenlive.org/en/trademark-logo/)                                                                             |
 | Software       | Blender 4.1                                             | Blender                   | [Blender](https://www.blender.org/)                                                                                             |
+| Software       | Audacity                                                | Audacity Team             | [Audacity](https://www.audacityteam.org/)                                                                                       |
 | Sound Effect   | Portal_Idle.wav                                         | couchHero                 | [FreeSound](https://freesound.org/people/couchHero/sounds/168910/)                                                              |
 | Sound Effect   | FireBurning_v2.wav                                      | pcaeldries                | [FreeSound](https://freesound.org/people/pcaeldries/sounds/30322/)                                                              |
 | Sound Effect   | Gunshot 4.wav                                           | ShawnyBoy                 | [FreeSound](https://freesound.org/people/ShawnyBoy/sounds/166191/)                                                              |
@@ -137,6 +138,9 @@ https://assetstore.unity.com/packages/p/quick-outline-115488 (Accessed: 19 April
 2024). 
 
 ### Software
+
+Audacity Team (2024) Audacity ®: Free audio editor, recorder, music making and more!, A yellow and orange waveform between the ears of a set of blue headphones.
+Available at: https://www.audacityteam.org/ (Accessed: 27 April 2024).
 
 Bailey, L. (2024) OBS Studio, Open Broadcaster Software. Available at:
 https://obsproject.com/ (Accessed: 26 April 2024).

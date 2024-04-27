@@ -30,7 +30,7 @@ I added two sounds to the pistol Game Object in my project, one for firing and o
 
 ## Environment Sounds
 
-These sound effects are setup by having an Audio Source component attached to the Game Object that will be playing these sounds. I have changed the value of the
+These sound effects are set up by having an Audio Source component attached to the Game Object that will be playing these sounds. I have changed the value of the
 Audio Source component's "Spatial Blend" variable to maximum, so that it gets louder / quieter depending on distance from the player:
 
 ![Showcase of the Audio Source Component settings used for environment sounds within my game](audio_source_component_settings.png)
@@ -45,4 +45,4 @@ I added a simple looping campfire sound effect, added to the campfire(s) in my s
 
 I added an ambient sound effect to my portal(s) within my scenes.
 
-<video src="portal_ambient_sound.mp4"/>
+<video src="portal_ambient_sound.mp4" />

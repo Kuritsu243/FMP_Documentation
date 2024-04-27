@@ -25,6 +25,8 @@
     <toc-element topic="Self-Evaluation.md"/>
     <toc-element topic="Attendance-and-Engagement.md">
     </toc-element>
+    <toc-element topic="Online-Professional-Practice.md"/>
+    <toc-element topic="Development-Tutorial.md"/>
     <toc-element topic="Builds.md"/>
     <toc-element topic="Game-Source.md">
         <toc-element topic="Unused-Scripts.md"/>
