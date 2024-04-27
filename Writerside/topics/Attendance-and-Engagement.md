@@ -1,4 +1,5 @@
 # Attendance and Engagement
+<show-structure depth="2" />
 
 ## Pre-Production
 

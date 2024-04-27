@@ -1,4 +1,5 @@
 # Documentation Deployment
+<show-structure depth="2" />
 
 ## Introduction
 

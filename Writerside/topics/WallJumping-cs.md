@@ -1,4 +1,5 @@
 # WallJumping.cs
+<show-structure depth="2" />
 
 ## Description
 This script controls the Wall Jumping state of the player.

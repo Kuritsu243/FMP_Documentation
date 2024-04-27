@@ -1,4 +1,5 @@
 # Documentation Development
+<show-structure depth="2" />
 
 ## Introduction
 

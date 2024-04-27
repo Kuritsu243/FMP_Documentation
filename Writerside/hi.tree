@@ -22,11 +22,13 @@
     <toc-element topic="Documentation-Development.md"/>
     <toc-element topic="Documentation-Deployment.md"/>
     <toc-element topic="External-Assets.md"/>
+    <toc-element topic="Feedback-Received.md"/>
     <toc-element topic="Self-Evaluation.md"/>
     <toc-element topic="Attendance-and-Engagement.md">
     </toc-element>
     <toc-element topic="Online-Professional-Practice.md"/>
     <toc-element topic="Development-Tutorial.md"/>
+    <toc-element topic="Showreel.md"/>
     <toc-element topic="Builds.md"/>
     <toc-element topic="Game-Source.md">
         <toc-element topic="Unused-Scripts.md"/>

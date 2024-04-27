@@ -1,4 +1,5 @@
 # EnemyProjectile.cs
+<show-structure depth="2" />
 
 ## Description
 

@@ -1,4 +1,5 @@
 # PlayerController.cs
+<show-structure depth="2" />
 
 ## Description
 This script is used for controlling the player and handling all the player-relevant logic.

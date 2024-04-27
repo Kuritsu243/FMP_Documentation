@@ -1,4 +1,5 @@
 # Tools Used
+<show-structure depth="2" />
 
 ## Introduction
 

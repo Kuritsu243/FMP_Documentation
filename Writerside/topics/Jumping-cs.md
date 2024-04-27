@@ -1,4 +1,5 @@
 # Jumping.cs
+<show-structure depth="2" />
 
 ## Description
 This script controls the Jumping state of the player.

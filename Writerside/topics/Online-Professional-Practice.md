@@ -1,4 +1,5 @@
 # Online Professional Practice
+<show-structure depth="2" />
 
 ## GitHub
 

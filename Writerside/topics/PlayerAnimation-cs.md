@@ -1,4 +1,5 @@
 # PlayerAnimation.cs
+<show-structure depth="2" />
 
 ## Description
 This script controls the animations for the player character model.

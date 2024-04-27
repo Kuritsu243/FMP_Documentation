@@ -1,4 +1,5 @@
 # Game Script
+<show-structure depth="2" />
 
 This is the script I have used for my tutorial scene. This is shown via text dialogue on the screen, acting as the game
 telling the player what to do. I implemented this into my [TutorialController.cs Script](TutorialController-cs.md) via 

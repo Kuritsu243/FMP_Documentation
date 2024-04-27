@@ -1,4 +1,5 @@
 # Shader Development
+<show-structure depth="2" />
 
 Throughout my project, I experimented slightly with shaders. I have no prior knowledge / experience using
 Unity's built-in shader graph feature, so I thought that it would be a nice introduction to doing so.

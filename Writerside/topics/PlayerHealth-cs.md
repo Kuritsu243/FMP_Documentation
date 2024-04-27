@@ -1,4 +1,5 @@
 # PlayerHealth.cs
+<show-structure depth="2" />
 
 ## Description
 This script is used to manage the Player's health in-game. It calls the required functions for the Player Death to happen.

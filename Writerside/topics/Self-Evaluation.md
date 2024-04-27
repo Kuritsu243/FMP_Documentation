@@ -1,4 +1,5 @@
 # Critical Reflection
+<show-structure depth="2" />
 
 ## Introduction
 

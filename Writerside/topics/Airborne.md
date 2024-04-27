@@ -1,4 +1,5 @@
 # Airborne.cs
+<show-structure depth="2" />
 
 ## Description
 This script controls the Airborne state of the player.

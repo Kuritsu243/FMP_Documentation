@@ -1,4 +1,5 @@
 # Sound Effects
+<show-structure depth="2" />
 
 ## Description
 

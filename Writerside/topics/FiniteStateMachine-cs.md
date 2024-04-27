@@ -1,4 +1,5 @@
 # FiniteStateMachine.cs
+<show-structure depth="2" />
 
 ## Description
 This script defines the Player's Finite State Machine system, and handles the initialisation & changing of the active state.

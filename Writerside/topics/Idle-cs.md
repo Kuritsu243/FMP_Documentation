@@ -1,4 +1,5 @@
 # Idle.cs
+<show-structure depth="2" />
 
 ## Description
 This script controls the Idle state of the player.

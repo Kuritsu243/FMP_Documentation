@@ -1,4 +1,5 @@
 # FsmState.cs
+<show-structure depth="2" />
 
 ## Description
 The base class for all the states used within the Player's Finite State Machine.
