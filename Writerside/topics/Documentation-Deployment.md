@@ -4,7 +4,7 @@
 ## Introduction
 
 Writerside works by translating the markdown files for each page to HTML format. In doing so, it is only accessible via a web-server. 
-When previewing my documentation, that you are currently reading, it is hosted locally, as shown in the following image:
+When previewing my documentation that you are currently reading, it is hosted locally, as shown in the following image:
 
 ![Screenshot showing WriterSide running a web-server on localhost](localhost.png){thumbnail="true"}
 
@@ -109,4 +109,4 @@ After setting this up, whenever I push my documentation to GitHub via Git CLI, t
 
 This is extremely useful, as I can also track the phases of deployment that the action is currently in:
 
-![Screenshot showing the actions process](actions_build_test_deploy.png){thumbnail="true"}
+![Screenshot showing the action process](actions_build_test_deploy.png){thumbnail="true"}

@@ -8,8 +8,8 @@ what sections are being displayed on the screen at a certain point of time durin
 
 ## Dialogue
 
-These are sorted by their index value, to show the rough order that this segments of dialogue appear as. In some segments
-i.e. the dialogue displayed when the player arrives at the larger island, is dependent on the actions the player takes
+These are sorted by their index value, to show the rough order that these segments of dialogue appear as. In some segments, 
+i.e., the dialogue displayed when the player arrives at the larger island, is dependent on the actions the player takes
 when the game tells the player to shoot the non-hostile NPC.
 
 ### Introduction 
@@ -20,7 +20,7 @@ when the game tells the player to shoot the non-hostile NPC.
 |   1   | I'll be your teacher today.                                 |
 |   2   | First, lets familiarize ourselves with this Games Controls. |
 
-### Input Prompts - Movement Tutorial
+### Input Prompts—Movement Tutorial
 
 | Index | Text                        |
 |:-----:|-----------------------------|

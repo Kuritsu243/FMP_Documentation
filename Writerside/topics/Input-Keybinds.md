@@ -1,4 +1,4 @@
-# Input &amp; Keybinds
+# Input &amp; Keybindings
 
 ## Keyboard and Mouse Input
 I intend for this game to mostly be played with Keyboard and Mouse input. The default control scheme is

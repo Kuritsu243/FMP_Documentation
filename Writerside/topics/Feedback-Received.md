@@ -28,14 +28,14 @@ I can't really provide a literal example of feedback, but most of the feedback w
 
 ### Myself
 
-As posted multiple times on the internet, [you are your own worst critic.](https://www.reddit.com/r/Mindfulness/comments/r5g2jx/why_are_we_our_own_worst_critic/) The amount
+As posted multiple times on the internet, [you are your own worst critic.](https://www.reddit.com/r/Mindfulness/comments/r5g2jx/why_are_we_our_own_worst_critic/) The number
 of changes, restructures and restarting I have done regarding certain mechanics and environmental aspects within the game throughout the development phase have been **large**.
 If I spent multiple hours working on certain features, there was a high chance I'd return to the project the next day and then modify almost completely the approach I initially took.
-This led to some fine-tuning to certain scripts and settings that just make my game feel nicer to play compared to the originally clunky approaches. This reflects upon the large amount of variables
+This led to some fine-tuning to certain scripts and settings that just make my game feel nicer to play compared to the originally clunky approaches. This reflects upon the large number of variables
 that some of my scripts have, especially my [Player Controller script.](PlayerController-cs.md)
 
 ## Conclusion
 
 I think next time I would have liked to do online feedback, most likely via Google forms or a similar medium. I originally proposed this concept during the pre-production
-unit, however I simply ran out of time before doing this. Sending this out to a large group of people would have shown levels of anonymity and an easy way to access a compiled
+unit, however, I simply ran out of time before doing this. Sending this out to a large group of people would have shown levels of anonymity and an easy way to access a compiled
 list of feedback.

@@ -4,7 +4,7 @@
 ## Platform
 
 I have developed Timeleap for both the Windows and Linux desktop platform. This is due to 
-the increasing market of people using Linux for gaming - this can be due to the increasing number of users owning
+the increasing market of people using Linux for gaming. This could be due to the increasing number of users owning
 a Steam Deck by Valve, but could also be due to the increasing number of desktop gamers who tend to use Linux
 over Windows. There are a few challenges accompanied by this, but throughout development I have been testing consistently on
 both Linux and Windows systems. 
@@ -12,8 +12,8 @@ both Linux and Windows systems.
 ## Target Hardware
 
 I have optimised my game to run on a large variety of hardware. This prevents the potential audience from not 
-needing an insanely high specification system to play my game with an optimal experience. I have done this as a counter
-to the number of modern games which hve been releasing year by year, with increasingly more and more powerful hardware
+needing an incredibly high specification system to play my game with an optimal experience. I have done this as a counter
+to the number of modern games which have been released year by year, with increasingly more and more powerful hardware
 requirements for their games to run smoothly. To be more specific, here is the baseline minimum spec to run my game smoothly:
 - **CPU:** Intel i5 6400 / AMD Ryzen 5 1600
 - **Memory:** 8GiB Minimum, 16GiB Recommended

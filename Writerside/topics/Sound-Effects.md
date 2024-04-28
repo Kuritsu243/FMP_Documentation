@@ -3,9 +3,9 @@
 
 ## Description
 
-To make my game feel more complete, I added a few sound effects to my game. I would have ideally wanted to implement even more, however due to 
-time constraints I was unable to do so. I sourced all of my sounds from [FreeSound](https://freesound.org) - every sound published on this website is
-published under the Creative Commons licenses that allow the re-use of these sounds within any projects.
+To make my game feel more complete, I added a few sound effects to my game. I would have ideally wanted to implement even more, however, due to 
+time constraints I was unable to do so. I sourced all of my sounds from [FreeSound—](https://freesound.org)every sound published on this website is
+published under the Creative Commons licences that allow the re-use of these sounds within any projects.
 
 ## Weapon Sounds
 

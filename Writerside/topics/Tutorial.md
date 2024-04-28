@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 The first level that the player plays of this game is the game tutorial. This is also the setup for the games narrative and plot.
-I have done this because it is a good way of introducing the game to the player; they get to learn the games controls and the basic
+I have done this because it is a good way of introducing the game to the player; they get to learn the game controls and the basic
 game flow.
 
 ## Stage 1: Starting Island
