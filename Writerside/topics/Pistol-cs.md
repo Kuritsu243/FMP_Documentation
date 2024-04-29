@@ -2,6 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
+The script used by the player's pistol.
 
 ## Script
 ```C#
@@ -50,10 +51,9 @@ namespace Weapons
                 tutorialController.ActuallyAim();
             Instantiate(pistolBulletCasing, bulletCasingSpawnPos.position, transform.rotation);
             base.Fire();
-        }
-        
-    }
-    
+        }   
+    }   
 }
 ```
 {collapsed-title="Pistol.cs" collapsible="true"}
+

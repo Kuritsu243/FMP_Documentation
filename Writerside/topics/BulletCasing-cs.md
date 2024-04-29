@@ -3,6 +3,8 @@
 
 ## Description
 
+The script handling the bullet casing to be spawned once the weapon is fired.
+
 ## Script
 ```C#
 using UnityEngine;
@@ -29,3 +31,16 @@ namespace Weapons
 }
 ```
 {collapsible="true" collapsed-title="BulletCasing.cs"}
+
+## Private Methods
+{type="wide" sorted="asc"}
+Start()
+: Invokes the despawn function, and tries to get the rigidbody component. Sets the velocity of the pistol spawn casing to the right hand side of the weapon with a multiplier.
+
+Despawn()
+: Destroys the game object.
+
+## Variables
+{type="wide" sorted="asc"}
+_rigidbody
+: The rigidbody component attached to the bullet casing.

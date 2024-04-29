@@ -3,6 +3,8 @@
 
 ## Description
 
+The script attached to the enemy shotguns.
+
 ## Script
 ```C#
 using System.Collections.Generic;
@@ -38,5 +40,13 @@ namespace Weapons.Enemy
         }
     }
 }
+
 ```
 {collapsible="true" collapsed-title="EnemyShotgun.cs"}
+
+## Public Methods
+{type="wide" sorted="asc"}
+Fire()
+: Checks if the weapon state is not idle. Then verifies that the firing time is projectile, and not hitscan. Creates a new list
+of Rotations for the pellets, and adds them to a list. Proceeds to randomise the rotation of each pellet, get an available pooled projectile,
+and then initializes them.

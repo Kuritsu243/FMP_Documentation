@@ -3,6 +3,8 @@
 
 ## Description
 
+Script attached to all projectiles fired by the enemy, if the weapon is set up to be projectile instead of hit scan.
+
 ## Script
 ```C#
 using Player;
@@ -18,7 +20,6 @@ namespace Weapons.Enemy
             {
                 case "PlayerMesh":
                 case "Player":
-                    Debug.LogWarning("Player hit!!!");
                     if (other.transform.root.TryGetComponent<PlayerHealth>(out var playerHealthScript))
                         playerHealthScript.Damage(ProjectileDamage);
                     Despawn();
@@ -31,6 +32,11 @@ namespace Weapons.Enemy
         }
     }
 }
-
 ```
 {collapsible="true" collapsed-title="EnemyProjectile.cs"}
+
+## Public Methods
+{type="wide" sorted="asc"}
+OnTriggerEnter()
+: Checks if the player has collided with projectile. Attempts to get the player health component and called the Damage function, 
+with the projectiles damage value as an input. If it hits an enemy, tells the game to ignore the collision.

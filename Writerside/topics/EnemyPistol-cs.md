@@ -3,6 +3,9 @@
 
 ## Description
 
+This is the script used for the enemy pistol within my game. It is similar to the player pistol script, however, functions
+oppositely - being able to affect the player instead of the enemy objects.
+
 ## Script
 ```C#
 using Player;
@@ -34,3 +37,9 @@ namespace Weapons.Enemy
 }
 ```
 {collapsed-title="EnemyPistol.cs" collapsible="true"}
+
+## Public Methods
+{type="wide" sorted="asc"}
+Fire()
+: Called when an enemy shoots. Fires a raycast and then checks if the raycast hits the player. If it does, it called the `Damage()` function
+attached to the player health component.

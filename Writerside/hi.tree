@@ -16,6 +16,7 @@
     <toc-element topic="Tutorial.md"/>
     <toc-element topic="Game-Script.md"/>
     <toc-element topic="Game-Environment.md"/>
+    <toc-element topic="Game-Playthrough.md"/>
     <toc-element topic="Shader-Development.md"/>
     <toc-element topic="User-Interface.md"/>
     <toc-element topic="Sound-Effects.md"/>
@@ -32,7 +33,6 @@
     <toc-element topic="Showreel.md"/>
     <toc-element topic="Builds.md"/>
     <toc-element topic="Game-Source.md">
-        <toc-element topic="Unused-Scripts.md"/>
         <toc-element topic="Weapon-Scripts.md">
             <toc-element topic="Enemy-Weapon-Scripts.md">
                 <toc-element topic="EnemyBaseWeapon-cs.md"/>

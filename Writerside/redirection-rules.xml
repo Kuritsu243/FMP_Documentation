@@ -10,4 +10,9 @@
         <description>Created after removal of "This is the first topic" from Help Instance</description>
         <accepts>Default-topic.html</accepts>
     </rule>
+    <rule id="1f5e28f6">
+        <description>Created after removal of "Unused Scripts" from FGTE6003: Final Major Project - Timeleap
+        </description>
+        <accepts>Unused-Scripts.html</accepts>
+    </rule>
 </rules>
