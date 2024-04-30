@@ -1,3 +1,3 @@
 # Lighting 
 
-Start typing here...
+These scripts control the environment lighting.

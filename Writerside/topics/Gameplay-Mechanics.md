@@ -83,7 +83,7 @@ further configuration of the enemy AI and its complexity; allowing it to scale w
 UI within my game is very basic—it is rather minimal, whilst still being enough to explain what is going on within the game. If I had
 more time to work on this project, I would have extended the variety of UI assets that would have been implemented within my game.
 
-![UI Showcase](ui_showcase.png){height="500" thumbnail="true"}
+I touch upon this more in [User Interface Section.](User-Interface.md)
 
 ## Environment
 

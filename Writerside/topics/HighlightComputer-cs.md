@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+This script is used to draw an outline on the computer at the end of the tutorial level.
 ## Script
 ```C#
 using UnityEngine;
@@ -49,3 +49,19 @@ namespace Tutorial
 }
 ```
 {collapsed-title="HighlightComputer.cs" collapsible="true"}
+
+## Private Methods
+{type="wide" sorted="asc"}
+Start()
+: Gets the outline component, and disables it.
+Updates the colour of the outline.
+
+## Public Methods
+{type="wide" sorted="asc"}
+OutlineComputer()
+: Enables the computer outline.
+Tweens the weapon outline width via LeanTween.
+
+StopOutline()
+: Cancels the outline.
+Disables the outline object.

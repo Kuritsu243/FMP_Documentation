@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+Unused script initially intended to be used for weapons. 
 ## Script
 
 ```C#
@@ -18,3 +18,9 @@ namespace Weapons
 }
 ```
 {collapsible="true" collapsed-title="WeaponScript.cs"}
+
+## Variables
+{type="wide" sorted="asc"}
+
+weapon
+: The weapon to be used.

@@ -49,6 +49,7 @@
             <toc-element topic="WeaponScript-cs.md"/>
         </toc-element>
         <toc-element topic="UI-Scripts.md">
+            <toc-element topic="WinScreen-cs.md"/>
             <toc-element topic="StartScreen-cs.md"/>
             <toc-element topic="DeathScreen-cs.md"/>
             <toc-element topic="CanvasScript-cs.md"/>

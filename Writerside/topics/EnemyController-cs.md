@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+This script controls all enemies within the game.
 ## Script
 ```C#
 using System.Collections;
@@ -124,3 +124,36 @@ namespace AI
 }
 ```
 {collapsible="true" collapsed-title="EnemyController.cs"}
+
+## Private Methods
+{type="wide" sorted="asc"}
+Start()
+: Gets all the components required by the script and stores them as variables.
+if in tutorial, disables navmesh, tells the game they can't move, and disables the shooting component.
+
+EnableEnemy()
+: Enables the enemy, by enabling the nav mesh and enemy shooting components,
+and indicates to the enemy that they can move.
+
+FixedUpdate()
+: Checks if the enemy ammo is zero, and if so calls the reload function.
+Checks distance between themselves and the player,
+and if they're in range then sets the target destination to move to be the players location.
+If they are currently facing the player and can shoot, then call the PrepareToShoot function.
+
+LateUpdate()
+: Calculates the velocity, and passes it through to the animator component to update the current animation clip / state.
+
+IsFacingPlayer()
+: Returns whether the enemy is currently facing the player or not.
+
+PrepareToShoot()
+: Disables movement, looks at the player and then calls the coroutine to wait before attacking.
+
+WaitBeforeAttack()
+: Pauses for a pre-determined amount of time, before shooting.
+Re-enables movement, and starts the attack cooldown.
+
+TimeBeforeAttacks()
+: Updates values to indicate that the enemy can no longer shoot,
+waits for a certain amount of time, and then resets the value to tell the enemy script that they can shoot again.

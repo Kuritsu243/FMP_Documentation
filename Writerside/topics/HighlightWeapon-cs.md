@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+This script is used to highlight the weapon that the player collects during the tutorial.
 ## Script
 
 ```C#
@@ -73,3 +73,41 @@ namespace Tutorial
 }
 ```
 {collapsible="true" collapsed-title="HighlightWeapon.cs"}
+
+## Private Methods
+{type="wide" sorted="asc"}
+Start()
+: Gets the outline component, and disables it.
+Updates the colour of the outline.
+
+LerpHighlight()
+: Lerps the current outline width of the weapon whilst the outline is enabled.
+Calls the pulse outline coroutine.
+Replaced by a leantween ping pong.
+
+PulseOutline()
+: Lerps the current outline width of the weapon whilst the outline is enabled.
+Calls the LerpHighlight coroutine.
+Replaced by a leantween ping pong.
+
+## Public Methods
+{type="wide" sorted="asc"}
+
+OutlineWeapon()
+: Enables the weapon outline.
+Tweens the weapon outline width via LeanTween.
+
+## Variables
+{type="wide" sorted="asc"}
+targetOutlineWidth
+: The target outline width to have.
+
+outlineColor
+: The colour to be used for the outline.
+
+timeToTake
+: How long should be taken between the weapon having no outline and having a full outline.
+
+pulseTime
+: How long to pulse the weapon.
+

@@ -21,7 +21,6 @@ namespace UI
     // src https://www.youtube.com/watch?v=CE9VOZivb3I
     public class StartScreen : MonoBehaviour
     {
-
         [SerializeField] private GameObject crossFadeObj;
         [SerializeField] private TextMeshProUGUI loadingText;
         [Header("Buttons")]
@@ -31,19 +30,16 @@ namespace UI
         [SerializeField] private Button settingsBtn;
         [SerializeField] private Button applyBtn;
         [SerializeField] private Button aboutCloseBtn;
-        [SerializeField] private Button settingsCloseBtn;
-        
+        [SerializeField] private Button settingsCloseBtn;   
         [Header("Settings Menu")] 
         [SerializeField] private TMP_Dropdown resolutionDropdown;
         [SerializeField] private Slider volumeSlider;
         [SerializeField] private Toggle fullscreenToggle;
         [SerializeField] private AudioMixer audioMixer;
         [SerializeField] private float currentVolume;
-        
         [Header("UI Panel Objects")]
         [SerializeField] private GameObject aboutMenu;
         [SerializeField] private GameObject settingsMenu;
-        
         private List<Resolution> _screenResolutions;
         private static readonly int Start1 = Animator.StringToHash("Start");
         private Animator _crossFadeAnim;
@@ -74,9 +70,7 @@ namespace UI
         {
             LoadNextScene();
         }
-
-
-
+        
         private void ShowAboutMenu()
         {
             ToggleButtonInteractivity(false);
@@ -143,7 +137,6 @@ namespace UI
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
         }
 
-
         private void CloseAllMenus()
         {
             settingsMenu.SetActive(false);
@@ -155,8 +148,7 @@ namespace UI
         {
             Screen.fullScreen = isFullscreen;
         }
-        
-        
+                
         private void SetResolution(int resolutionIndex)
         {
             var resolution = _screenResolutions[resolutionIndex];
@@ -214,10 +206,146 @@ namespace UI
             yield return new WaitForSeconds(1f);
             SceneManager.LoadSceneAsync(levelIndex);
         }
-
-
-
     }
 }
+
 ```
 {collapsed-title="StartScreen.cs" collapsible="true"}
+
+## Private Methods
+{type="wide" sorted="asc"}
+Start()
+: disables the loading text.
+Adds listeners to all the buttons to be used within this scene.
+Enables / Disables the relevant UI elements.
+Initializes the resolutions that can be used by the game.
+Loads the current settings saved via player prefs.
+Stores a reference to the scene transition UI elements.
+
+StartGame()
+: calls the LoadNextScene function.
+
+ShowAboutMenu()
+: Shows the about menu.
+Disables button interactivity, and if any UI elements are already open then closes them.
+Enables the About Menu.
+
+CloseAboutMenu()
+: Enables button interactivity.
+Disables the About Menu.
+
+ShowSettingsMenu()
+: Toggles button interactivity.
+Closes all menus, then activates the settings menu.
+
+CloseSettingsMenu()
+: Toggles button interactivity.
+Disables the settings menu.
+
+CheckButtonInteractivity()
+: Checks if the settings menu or about menu is active in the scene.
+
+ToggleButtonInteractivity()
+: Sets the interactivity of the UI buttons dependent on the boolean value passed through as input.
+
+CloseGame()
+: Checks if in editor or a deployed build.
+If in editor, exit play mode.
+If in build, close the game.
+
+LoadNextScene()
+: Calls the LoadLevel corotuine, with the next scene index passed through as input.
+
+CloseAllMenus()
+: Enables button interactivity, and closes all UI panels.
+
+ToggleFullScreen()
+: Updates whether the game is full screen or not.
+
+SetResolution()
+: Updates the resolution based on what has been selected.
+Uses the index of the res, and then gets the width and height from the index.
+
+SetVolume()
+: Changes the volume value of the Audio Mixer to the value passed through as input.
+
+SaveSettings()
+: Stores the current settings via PlayerPrefs.
+
+LoadSettings()
+: Uses the values stored via PlayerPrefs to load the previous settings that the player / game has set.
+
+InitilizeResolutions()
+: Gets a list of resolutions, and converts it to a list.
+Then for each resolution available, converts it to something more legible in text,
+and adds it as an option to the dropdown used to set the resolution.
+Refreshes the dropdown menu values.
+
+LoadLevel()
+: Enables the loading text, and starts the scene transition.
+Waits for a second before loading the next scene.
+
+## Variables
+{type="wide" sorted="asc"}
+crossFadeObj
+: The parent object for the scene transition UI elements.
+
+loadingText
+: The text used to indicate the game is loading a scene.
+
+startBtn
+: The button used to start the game.
+
+aboutBtn
+: The button used to view the about menu.
+
+closeBtn
+: The button used to close the game.
+
+settingsBtn
+: The button used to view the settings menu.
+
+applyBtn
+: The button used to update the active settings.
+
+aboutCloseBtn
+: The button used to close the about menu.
+
+settingsCloseBtn
+: The button used to close the settings menu.
+
+resolutionDropdown
+: The dropdown list to display resolutions.
+
+volumeSlider
+: The slider used to control the games volume.
+
+fullScreenToggle
+: The toggle used to set full screen or not.
+
+audioMixer
+: The audio mixer controlled by the game, handles volume.
+
+currentVolume
+: The volume at the start.
+
+aboutMenu
+: The parent game object to show the about menu UI elements.
+
+settingsMenu
+: The parent game object to show the settings menu UI elements.
+
+_screenResolutions
+: The list of resolutions for the game.
+
+Start1
+: The hashed reference for the trigger of the scene transition animator.
+
+_crossFadeAnim
+: The animator component for the scene transitions.
+
+_currentResIndex
+: The current index of the active resolution.
+
+_hasFaded
+: Has the scene transition faded already.

@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+This script is used to simulate a light component flickering, by changing the intensity value.
 ## Script
 ```C#
 using System.Collections.Generic;
@@ -54,3 +54,42 @@ namespace Environment.Lighting
 }
 ```
 {collapsed-title="LightFlicker.cs" collapsible="true"}
+
+## Private Methods
+{type="wide" sorted="asc"}
+Start()
+: Gets the light component, and if flicker is enabled starts the queue for the new intensity values.
+
+FixedUpdate()
+: Generates a new light intensity, between the max and min light intensity values,
+and queues it to be set as the current active intensity. 
+
+Reset()
+: Clears the queue of the light intensity values.
+
+## Variables
+{type="wide" sorted="asc"}
+lightFlickerColour
+: The colour of the light.
+
+minIntensity
+: The minimum intensity for the light.
+
+maxIntensity
+: The maximum intensity for the light.
+
+enableFlicker
+: Should the light flicker.
+
+lightSmoothing
+: How smoothly will the light go to the next intensity.
+
+_lastSum
+: The last value, incremented by the intensity divided by the number of values in the queue
+
+_light
+: The light component being controlled.
+
+_lightQueue
+: The queue controlling the light intensity.
+

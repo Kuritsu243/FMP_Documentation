@@ -2,7 +2,8 @@
 <show-structure depth="2" />
 
 ## Description
-
+This script is mostly unused due to the movement to a finite state machine.
+All this script does is lock the cursor on begin play.
 ## Script
 
 ```C#

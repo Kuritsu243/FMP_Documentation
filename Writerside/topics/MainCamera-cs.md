@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+This script is used to control the main camera that will be used within the game.
 ## Script
 ```C#
 using System;
@@ -103,10 +103,80 @@ namespace Cameras
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-        }
-        
-        
+        }        
     }
 }
+
 ```
 {collapsible="true" collapsed-title="MainCamera.cs"}
+
+## Private Methods
+{type="wide" sorted="asc"}
+Awake()
+: Checks if an instance of this script already exists in the game.
+If it does, then it destroys the script currently checking.
+If not, sets this script as the instance.
+
+SetActiveCamera()
+: Sets the active camera to the starting camera at the start of the game.
+Sets the priority to 10, while setting the previous cameras priority to 0.
+Will trigger a cinemachine transition between the two.
+
+GetActiveMode()
+: Returns the current active camera.
+
+SetSensitivity()
+: Calls the cinemachine mouse look script, and updates the mouse sensitivity.
+
+DoFov()
+: Tweens the camera's FOV.
+
+DoTilt
+: Tweens the camera's Dutch.
+
+## Variables
+{type="wide" sorted="asc"}
+firstPersonCam
+: The camera used for first-person perspective.
+
+thirdPersonCam
+: The camera used for third-person perspective.
+
+cameraController
+: The camera controller component.
+
+isTesting
+: Is the developer currently in testing mode.
+
+xRotation
+: the x rotation of the camera.
+
+yRotation
+: the y rotation of the camera.
+
+zRotation
+: the z rotation of the camera.
+
+dutch
+: The dutch value of the camera.
+
+fov
+: the FOV value of the camera.
+
+lerpFov
+: Should the game lerp the camera's FOV.
+
+ActiveCameraMode
+: Direct variable reference to the active camera.
+
+_previousCam
+: The previous active camera.
+
+_activeCam
+: The currently active camera.
+
+_cinemachineMouseLook
+: The cinemachine mouse look component.
+
+Instance
+: The instance of the main camera script.

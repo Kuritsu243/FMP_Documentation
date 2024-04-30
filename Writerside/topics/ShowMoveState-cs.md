@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+This script was used to display the current move state the player's finite state machine was in.
 ## Script
 ```C#
 using Player;
@@ -31,3 +31,11 @@ namespace Debugging
 }
 ```
 {collapsed-title="ShowMoveState.cs" collapsible="true"}
+
+## Private Methods
+{type="wide" sorted="asc"}
+Start()
+: Gets the player controller, and the text to be updated.
+
+FixedUpdate()
+: Updates the text according to the players current movement state.

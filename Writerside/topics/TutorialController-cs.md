@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+This is the script to control all the logic during the tutorial scene.
 ## Script
 ```C#
 using System.Collections;
@@ -587,3 +587,254 @@ namespace Tutorial
 }
 ```
 {collapsible="true" collapsed-title="TutorialController.cs"}
+
+## Private Methods
+{type="wide" sorted="asc"}
+Start()
+: Disables the tutorial prompt UI elements.
+Creates dictionaries with the dialogue to be shown during this tutorial.
+Sets the current text to the first index of the introduction.
+Stores references to the necessary parts required by this script.
+Sets up tweening for the text to fade out and in repeatedly.
+Calls the introduction coroutine, and sets up the required key prompts.
+
+EnemiesAreKilled()
+: Enables the tutorial text hint,
+and then shows the dialogue required once the player has killed the enemies during the kill challenge.
+
+SpawnPortal()
+: Spawns the portal at the end of the game.
+Tweens the portal materials alpha so that it appears that it fades into the scene.
+Sucks the computer into the portal.
+Updates the text displayed throughout this.
+
+SpawnEnemyIsland()
+: Displays the text prompts relevant to the enemy island appearing.
+Moves the island to appear.
+Starts the kill challenge, and checks when it is completed. 
+
+FinalPrompts()
+: Displays the final prompts at the end of the tutorial before the portal appears.
+
+CompleteFirstPrompt()
+: Hides the input prompt UI elements.
+starts the next tutorial section by making the walls appear.
+
+StartWallRunPrompt()
+: Updates the dialogue displayed, dependent on when the player has reached certain sections of the wall running tutorial.
+
+FixedUpdate()
+: Constantly checks if all the prompt entries in the dictionary are true.
+If so, then makes the walls appear.
+
+IntroductionText()
+: Controls the dialogue to be displayed at the start of the game. 
+
+InputPrompts()
+: Controls the dialogue during the input tutorial.
+
+MakeWallsAppear()
+: Waits two seconds before making the walls appear, and continuing the tutorial.
+
+StartWeaponTutorial()
+: Starts the weapon tutorial and tells the player to pick-up the weapon.
+Enables the pistol outline.
+
+ShowWeaponText()
+: Continued prompts once the player has picked up the weapon.
+
+PistolRelatedDialogue()
+: Tells the player to shoot the NPC.
+Updates dialogue if they miss, or don't shoot the enemy.
+Also updates the text once the player kills the enemy.
+
+## Public Methods
+{type="wide" sorted="asc"}
+IntroComplete()
+: Returns whether the player has completed the introduction or not.
+
+OtherIslandReached()
+: Tells the game that the player has reached the second island, then continues the weapon tutorial.
+
+PistolCollected()
+: Tells the game that the player has collected the weapon, then continues the weapon dialogue.
+
+ActuallyAim()
+: Displays relevant dialogue if the player misses the enemy when shooting for the first time.
+
+TutorialEnemyKilled()
+: Displays relevant dialogue to when the player kills the non-hostile NPC, and continues the dialogue.
+
+EnemyChallengeComplete()
+: Resumes the dialogue prompts once the player has killed the enemies from the kill challenge.
+
+ComputerInteracted()
+: Displays the relevant dialogue once the player interacts with the computer at the end of the tutorial.
+
+ClearAlpha()
+: Fades an images alpha to zero, and loops dependent on input.
+
+ClearTextAlpha()
+: Fades a text's alpha to zero, and loops dependent on input.
+
+FillAlpha()
+: Fades an images alpha to full, and loops dependent on input.
+
+AlphaPrompt()
+: Fades text and image, and fills an image all at the same time.
+
+ChangePrompt()
+: Fades out the old dialogue, cancels the tweens,
+updates the dialogue, and then sets up the tweens on that dependent on input.
+
+ChangeTextPromptOnly()
+: Fades out the old text, updates the dialogue, and starts tweens on the new dialogue.
+
+## Variables
+
+### Enums
+{type="wide" sorted="asc"}
+NextKeyPress
+: The next key input the player needs to do.
+
+### Components
+{type="wide" sorted="asc"}
+playerController
+: The player controller script attached to the player.
+
+canvas
+: The canvas component attached to the UI.
+
+floatingWallController
+: The component that controls the floating walls.
+
+tutorialEnemyController
+: The component that controls the enemies during the tutorial.
+
+portalSpriteRenderer
+: The sprite renderer component that displays the portal.
+
+_pistolOutline
+: The component that controls the outline of the weapon.
+
+_computerOutline
+: The component that controls the outline of the computer.
+
+### Images
+{type="wide" sorted="asc"}
+keypressW
+: The component displaying the W keyboard image.
+
+keypressWalt
+: The component displaying the W keyboard background image.
+
+keypressS
+: The component displaying the S keyboard image.
+
+keypressSalt
+: The component displaying the S keyboard background image.
+
+keypressA
+: The component displaying the A keyboard image.
+
+keypressAalt
+: The component displaying the A keyboard background image.
+
+keypressD
+: The component displaying the D keyboard image.
+
+keypressDalt
+: The component displaying the D keyboard background image.
+
+keypressSpace
+: The component displaying the Spacebar keyboard image.
+
+keypressSpacealt
+: The component displaying the Spacebar keyboard background image.
+
+keypressComplete
+: The component displaying the check image.
+
+keypressCompleteAlt
+: The component displaying the check background image.
+
+### Game Objects
+{type="wide" sorted="asc"}
+promptW
+: The parent object of the UI elements for the press W prompts.
+
+promptS
+: The parent object of the UI elements for the press S prompts.
+
+promptA
+: The parent object of the UI elements for the press A prompts.
+
+promptD
+: The parent object of the UI elements for the press D prompts.
+
+promptJump
+: The parent object of the UI elements for the press space prompts.
+
+promptComplete
+: The parent object of the UI elements for the intro complete prompts.
+
+tutorialPistol
+: The pistol to be picked up by the player during the tutorial.
+
+endComputer
+: The computer to be interacted with at the end of the tutorial.
+
+enemyIsland
+: The enemy island Game Object.
+
+portal
+: The portal Game Object.
+
+### Text
+{type="wide" sorted="asc"}
+tutorialTextHint
+: The text component being shown throughout the tutorial. 
+
+### Booleans
+{type="wide" sorted="asc"}
+_areWallsAppearing
+: Are the walls to wall-run from appearing.
+
+_isWeaponGlowing
+: Is the weapon glowing.
+
+_hasEnemyIslandAppeared
+: Has the enemy island appeared yet.
+
+hasFiredPistolYet
+: Has the player fired the pistol yet.
+
+### Dictionaries
+{type="wide" sorted="asc"}
+TutorialChecks
+: The checks during the start of the game. 
+
+EnemyChecks
+: The checks once the player picks up the weapon.
+
+WallRunChecks
+: The checks whilst the player is wall-running.
+
+_introductionTexts
+: The texts to be displayed at the start of the game.
+
+_inputPromptTexts
+: The texts to be displayed during the input tutorial.
+
+_wallRunPromptTexts
+: The texts to be displayed whilst wall-running.
+
+_weaponPromptTexts
+: The texts to be displayed when the player first finds the weapon, and has to kill the NPC.
+
+_enemyIslandTexts
+: The texts to be displayed when the enemy island appears.
+
+_challengeCompleteTexts
+: The texts to be displayed upon the enemies being killed, and the portal appearing.
+

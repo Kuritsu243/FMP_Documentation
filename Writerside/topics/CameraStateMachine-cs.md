@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+Base class to be used for the camera state machine.
 ## Script
 ```C#
 using Cameras.FSM.States;
@@ -42,3 +42,11 @@ namespace Cameras.FSM
 }
 ```
 {collapsible="true" collapsed-title="CameraStateMachine.cs"}
+
+## Public Methods
+{type="wide" sorted="asc"}
+Initialize()
+: Sets the current state to the starting state, and enters it.
+
+ChangeState()
+: Stores a reference to the current state, exits it, updates the current state to be the new state, and enters it.

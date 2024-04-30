@@ -3,6 +3,8 @@
 
 ## Description
 
+This script is attached to any of the weapon projectiles used within the game.
+
 ## Script
 ```C#
 using AI;
@@ -48,3 +50,28 @@ namespace Weapons
 }
 ```
 {collapsible="true" collapsed-title="Projectile.cs"}
+
+## Public Methods
+{type="wide" sorted="asc"}
+Initialize()
+: Takes all the relevant variables as input, required to fire the projectile and for it to function in the scene.
+
+Despawn()
+: Disables the object within the scene.
+
+OnTriggerEnter()
+: Checks the collided tag of the object.
+If player, then ignore the collision.
+If Enemy, then attempt to get the Enemy Health component and calls the Damage function.
+
+## Variables
+{type="wide" sorted="asc"}
+
+ProjectileDamage
+: The damage the projectile will do.
+
+ProjectileCollider
+: The collision component attached to the game object.
+
+_projectileRigidbody
+: The rigidbody component attatched to the game object.

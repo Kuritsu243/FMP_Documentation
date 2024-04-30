@@ -51,3 +51,17 @@ namespace Weapons
 }
 ```
 {collapsed-title="Shotgun.cs" collapsible="true"}
+
+## Public Methods
+{type="wide" sorted="asc"}
+
+Fire()
+: Checks if the weapon is currently idle.
+Calculates weapon spread.
+If shotgun is set to raycast then fires a raycast and checks if it has hit the enemy.
+If it has, then will call the Damage function on the EnemyHealth component.
+If projectile mode, then creates a new list of pellets,
+randomises the rotation, and for each one will apply randomised rotation.
+Then gets the projectile script attached to them,
+and calls the Initialize function, with the relevant values needed for the projectile to work.
+Finally, instantiates the bullet casing.

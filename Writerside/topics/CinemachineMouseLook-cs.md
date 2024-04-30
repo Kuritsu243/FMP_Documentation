@@ -2,7 +2,7 @@
 <show-structure depth="2" />
 
 ## Description
-
+My modified version of the cinemachine input provider, to scale with the mouse sensitivity in-game.
 ## Script
 ```C#
 using System;
@@ -91,3 +91,35 @@ namespace Cameras
 }
 ```
 {collapsed-title="CinemachineMouseLook.cs" collapsible="true"}
+## Private Methods
+{type="wide" sorted="asc"}
+Awake()
+: Updates the sensitivity depending on the mouse sensitivity.
+Gets the player input component, if it can't then will manually setup the input provider.
+
+## Public Methods
+{type="wide" sorted="asc"}
+UpdateSensAndSmoothing()
+: Stores a reference to the new sensitivity.
+Updates the acceleration and deceleration time to the new sensitivity.
+
+FixedUpdate()
+: While playing the game is in play mode, constantly update the input value.
+
+ProcessInput()
+: Reads the value of the mouse input.
+
+GetValue()
+: Gets the value of the mouse input with the mouse sensitivity applied.
+
+## Variables
+{type="wide" sorted="asc"}
+_mouseSensitivity
+: the value of the mouse sensitivity to be read by the mouse reader class.
+
+mouseSens
+: The mouse sensitivity that can be set within the unity editor.
+
+playerInput
+: The player input component that this script requires.
+
